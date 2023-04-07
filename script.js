@@ -5,7 +5,8 @@ function calcularFatorial() {
     for (let i = 1; i <= n1; i++) {
         fatorial *= i;
     }
-    if (isNaN(n1)){
+
+    if (isNaN(n1)) {
         alert('Desculpe-me, mas é permitido somente o uso de números')
         return
     }
@@ -32,10 +33,11 @@ function calcularDivisaoFatorial() {
         fatorialDenominador *= i;
     }
 
-    if (isNaN(numerador) || isNaN(denominador)){
+    if (isNaN(numerador) || isNaN(denominador)) {
         alert('Desculpe-me, mas é permitido somente o uso de números')
         return
     }
+
     let divisaoFatorial = fatorialNumerador / fatorialDenominador;
 
     const mensagemDivisaoFatorial = document.getElementById('mensagemDivisaoFatorial');
@@ -61,7 +63,7 @@ function calcularArranjo() {
         pFatorial *= i;
     }
 
-    if (isNaN(n) || isNaN(p)){
+    if (isNaN(n) || isNaN(p)) {
         alert('Desculpe-me, mas é permitido somente o uso de números')
         return
     }
@@ -74,26 +76,28 @@ function calcularArranjo() {
     resultado.value = arranjo;
 }
 
-function calcularCombinacao(){
+function calcularCombinacao() {
     let n = document.getElementById('N!').value;
     n = parseFloat(n);
     let nFatorial = 1;
     for (let i = 1; i <= n; i++) {
         nFatorial *= i;
     }
+
     let k = document.getElementById('k!').value;
     k = parseFloat(k);
     let kFatorial = 1;
     for (let i = 1; i <= k; i++) {
         kFatorial *= i;
     }
+    
     let kSubtracao = n - k;
     let kSubtracaoFatorial = 1;
     for (let i = 1; i <= kSubtracao; i++) {
         kSubtracaoFatorial *= i;
     }
 
-    if (isNaN(n) || isNaN(k)){
+    if (isNaN(n) || isNaN(k)) {
         alert('Desculpe-me, mas é permitido somente o uso de números')
         return
     }

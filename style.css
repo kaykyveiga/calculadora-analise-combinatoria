@@ -1,13 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.header{
-    background-color: rgb(65, 61, 61);
+
+body {
+    background: #ffffff;
+}
+
+.header {
+    background: #383535;
     height: 100px;
     text-align: center;
 }
-.header > h1{
+
+.header>h1 {
     padding-top: 25px;
     color: #ffffff;
     text-transform: uppercase;
@@ -15,30 +21,33 @@
     font-weight: bold;
 }
 
-.itens{
-    background: rgba(224, 211, 211, 0.34);
+.itens {
+    background: #e0d3d357;
     margin: 15px;
     padding: 10px;
     border-radius: 15px;
 }
-.itens > h2{
-    letter-spacing: 1.1px;
-    color: rgba(0, 0, 0, 0.711);
 
+.itens>h2 {
+    letter-spacing: 1.1px;
+    color: #000000b5;
 }
 
-.itens p, label {
+.itens p,
+label {
     color: #000000;
     font-size: 17px;
-    
+
 }
-.itens input{
-    background-color: white;
+
+.itens input {
+    background-color: #ffffff;
     margin-top: 10px;
     border-radius: 5px;
     padding: 5px;
     border: 1.8px solid #1385ffd1;
 }
+
 .button {
     margin: 10px 0px;
     border-radius: 10px;
@@ -50,11 +59,11 @@
 }
 
 .button:hover {
-    background: #ffff ;
+    background: #ffff;
     color: #1385FF;
 }
 
-footer{
+footer {
     background-color: #0a61bed1;
     padding: 20px;
     color: white;
@@ -65,18 +74,21 @@ footer{
 
 /*Media queries*/
 
-@media  screen and (min-width: 1000px) {
-    .conteiner{
+@media screen and (min-width: 1000px) {
+    .conteiner {
         width: 75%;
         margin: auto;
     }
-    .header{
+
+    .header {
         height: 120px;
     }
-    .header > h1{
+
+    .header>h1 {
         padding-top: 30px;
     }
-    .itens{
+
+    .itens {
         padding: 20px;
     }
 }
