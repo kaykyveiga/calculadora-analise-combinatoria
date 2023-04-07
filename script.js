@@ -15,7 +15,7 @@ function calcularFatorial() {
     resultado.value = fatorial;
 
     const mensagemFatorial = document.getElementById('mensagemFatorial');
-    mensagemFatorial.innerHTML = `A conta realizada foi ${n1}!`
+    mensagemFatorial.innerText = `A conta realizada foi ${n1}!`
 }
 
 function calcularDivisaoFatorial() {
@@ -41,7 +41,7 @@ function calcularDivisaoFatorial() {
     let divisaoFatorial = fatorialNumerador / fatorialDenominador;
 
     const mensagemDivisaoFatorial = document.getElementById('mensagemDivisaoFatorial');
-    mensagemDivisaoFatorial.innerHTML = `A conta realizada foi ${numerador}! / ${denominador}!`
+    mensagemDivisaoFatorial.innerText = `A conta realizada foi ${numerador}! / ${denominador}!`
 
     const resultado = document.getElementById('resultadoDivisaoFatorial');
     resultado.value = divisaoFatorial;
@@ -71,7 +71,7 @@ function calcularArranjo() {
     let arranjo = nFatorial / pFatorial;
 
     const mensagemArranjo = document.getElementById('mensagemArranjo');
-    mensagemArranjo.innerHTML = `A conta realizada foi ${n}! / (${n} - ${p})!`
+    mensagemArranjo.innerText = `A conta realizada foi ${n}! / (${n} - ${p})!`
     const resultado = document.getElementById('resultadoArranjo');
     resultado.value = arranjo;
 }
