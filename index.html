@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Combinatória</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="demo-files/demo.css">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+
+<body>
+    <header class="header">
+        <h1>Análise Combinatória</h1>
+    </header>
+    <div class="conteiner">
+        <div class="itens">
+            <h2>Números Fatorias</h2>
+            <p>
+                Números fatoriais são uma sequência de números inteiros positivos que são obtidos a partir do produto de
+                todos os números inteiros positivos menores ou iguais a um número específico. Esse número é representado
+                pelo símbolo "!", que é lido como "fatorial". <br>
+                Por exemplo, o fatorial de 5 é escrito como "5!" e é igual ao produto dos números inteiros positivos
+                menores
+                ou iguais a 5: <br>
+                5! = 5 x 4 x 3 x 2 x 1 = 120
+            </p>
+            <p>Descubra qualquer número fatorial:</p>
+
+            <label for="n1">Digite o número:</label>
+            <input type="text" name="num1" id="n1"><br>
+            <label for="resultado">O resultado é:</label>
+            <input type="text" name="resultado" id="resultado" disabled> <br>
+            <p id="mensagemFatorial"></p>
+
+            <button class="button" onclick="calcularFatorial()">Calcular</button>
+        </div>
+
+        <div class="itens">
+            <h2>Divisão de números fatoriais</h2>
+            <p>A divisão de números fatoriais é uma operação matemática que envolve a divisão do fatorial de um número
+                pelo
+                fatorial de outro número. O fatorial de um número é definido como o produto de todos os números inteiros
+                positivos de 1 até o número em questão.
+            </p>
+            <p>Onde <strong>(N! / N!)</strong></p>
+            <p>
+                Para saber a divisão de qualquer número fatorial basta você digitar abaixo:
+            </p>
+            <label for="numerador">Digite o numerador!:</label>
+            <input type="text" name="numerador" id="numerador"> <br>
+            <label for="denominador">Digite o denominador!:</label>
+            <input type="text" name="denominador" id="denominador"> <br>
+            <label for="resultadoDivisaoFatorial">O resultado é:</label>
+            <input type="text" name="resultadoDivisaoFatorial" id="resultadoDivisaoFatorial" disabled> <br>
+            <p id="mensagemDivisaoFatorial"></p>
+            <button class="button" onclick="calcularDivisaoFatorial()">Calcular</button>
+        </div>
+
+        <div class="itens">
+            <h2>Arranjo</h2>
+            <p>Arranjo, na matemática, é um conceito da análise combinatória que representa o número de maneiras
+                diferentes
+                que um conjunto de elementos pode ser arranjado em uma ordem específica. Em outras palavras, um arranjo
+                é
+                uma combinação ordenada de elementos de um conjunto. <br>
+                O número de arranjos de r elementos tomados de um conjunto de n elementos é denotado por A(n,p) ou nPp,
+                onde: <br>
+                <strong>A(n,p) = n! / (n-p)!</strong>
+            </p>
+            <p>Para saber o resultado de qualquer arranjo, basta definir o resultado de N! e P!</p>
+            <label for="n!">Digite o N!:</label>
+            <input type="text" name="n!" id="n!"> <br>
+            <label for="p!">Digite o P!:</label>
+            <input type="text" name="p!" id="p!"> <br>
+            <label for="resultadoArranjo">O resultado é:</label>
+            <input disabled type="text" name="resultadoArranjo" id="resultadoArranjo"> <br>
+            <p id="mensagemArranjo"></p>
+            <button class="button" onclick="calcularArranjo()">Calcular</button>
+        </div>
+
+        <div class="itens">
+            <h2>Combinação Simples</h2>
+            <p>Combinação simples é uma técnica de contagem usada para calcular o número de maneiras diferentes que um
+                subconjunto de elementos pode ser escolhido de um conjunto maior, sem considerar a ordem dos elementos
+                selecionados. <br>
+                A fórmula para calcular o número de combinações simples é dada por:
+                <strong>C(n, k) = n! / (k! * (n-k)!)</strong> <br>
+                Para executar qualquer conta de combinação simples, basta declarar o valor de N! e K! abaixo:
+            </p>
+            <label for="N!">Digite o N!:</label>
+            <input type="text" name="N!" id="N!"> <br>
+            <label for="k!">Digite o K!:</label>
+            <input type="text" name="k!" id="k!"> <br>
+            <label for="resultadoCombinacao">O resultado é:</label>
+            <input type="text" name="resultadoCombinacao" id="resultadoCombinacao" disabled> <br> 
+            <p id="mensagemCombinacao"></p>
+            <button class="button" onclick="calcularCombinacao()">Calcular</button>
+        </div>
+
+
+    </div>
+    <footer>Desenvolvido por Kayky Veiga <br>
+       
+</body>
+
+
+</html>
