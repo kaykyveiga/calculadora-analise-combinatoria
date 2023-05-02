@@ -22,23 +22,22 @@ body {
 }
 
 .itens {
-    background: #e0d3d357;
+    background: #bcb8b886;
     margin: 15px;
     padding: 10px;
     border-radius: 15px;
 }
 
-.itens>h2 {
+.itens > h2 {
     letter-spacing: 1.1px;
     color: #000000b5;
 }
 
-.itens p,
-label {
+.itens  p,label{
     color: #000000;
     font-size: 17px;
-
 }
+
 
 .itens input {
     background-color: #ffffff;
@@ -66,10 +65,14 @@ label {
 footer {
     background-color: #0a61bed1;
     padding: 20px;
-    color: white;
+    color: #ffffff;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
+}
+footer a{
+    text-decoration: underline;
+    color: #ffffff;
 }
 
 /*Media queries*/
