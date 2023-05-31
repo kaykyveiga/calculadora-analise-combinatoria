@@ -1,86 +1,59 @@
-let fatorial_1 = 1;
-let fatorial_2 = 1;
-
-//Verifica se os campos estão vazios, ou foram preenchidos com letras.
 function verificaNumero(n1, n2) {
-    if (isNaN(n1) || isNaN(n2)) {
-        alert('Todos os campos precisam ser preenchidos com números!')
-        return location.reload();
+    if (Number.isNaN(n1) || Number.isNaN(n2)) {
+      alert('Todos os campos precisam ser preenchidos com números!');
+      location.reload();
     }
-}
-
-//Transforma o número para o seu fatorial. Houve a necessidade de criar dois loops pois em algumas funções tem  a necessidade de usar dois núemros fatorias.
-function transformaFatorial(numero1, numero2) {
-    fatorial_1 = 1;
-    for (let i = 1; i <= numero1; i++) {
-        fatorial_1 *= i;
+  }
+  
+  function calcularFatorial(numero) {
+    let fatorial = 1;
+    for (let i = 1; i <= numero; i++) {
+      fatorial *= i;
     }
-    fatorial_2 = 1;
-    for (let i = 1; i <= numero2; i++) {
-        fatorial_2 *= i;
-    }
-}
-function calcularFatorial() {
-    let n1 = document.getElementById('n1').value;
-    n1 = parseFloat(n1);
-
-    transformaFatorial(n1, 0);
-    verificaNumero(n1, n1)
-
-    const resultado = document.getElementById('resultado').value = fatorial_1;
-
-    const mensagemFatorial = document.getElementById('mensagemFatorial').textContent = `A conta realizada foi ${n1}!`;
-}
-
-function calcularDivisaoFatorial() {
-    let numerador = document.getElementById('numerador').value;
-    numerador = parseFloat(numerador);
-
-    let denominador = document.getElementById('denominador').value;
-    denominador = parseFloat(denominador);
-
+    return fatorial;
+  }
+  
+  function calcularFatorialElemento() {
+    const numero = parseFloat(document.getElementById('n1').value);
+    verificaNumero(numero, numero);
+    const fatorial = calcularFatorial(numero);
+    document.getElementById('resultado').value = fatorial;
+    document.getElementById('mensagemFatorial').textContent = `A conta realizada foi ${numero}!`;
+  }
+  
+  function calcularDivisaoFatorial() {
+    const numerador = parseFloat(document.getElementById('numerador').value);
+    const denominador = parseFloat(document.getElementById('denominador').value);
     verificaNumero(numerador, denominador);
-    transformaFatorial(numerador, denominador);
-
-    let divisao = fatorial_1 / fatorial_2;
-
-    const resultado = document.getElementById('resultadoDivisaoFatorial').value = divisao;
-    const mensagemDivisaoFatorial = document.getElementById('mensagemDivisaoFatorial').textContent = `A conta realizada foi ${numerador}! / ${denominador}!`;
-}
-
-function calcularArranjo() {
-    let n = document.getElementById('n!').value;
-    n = parseFloat(n);
-
-    let p = document.getElementById('p!').value;
-    p = parseFloat(p);
-    p = n - p;
-    verificaNumero(n, p);
-    transformaFatorial(n, p)
-
-    let arranjo = fatorial_1 / fatorial_2;
-
-    const resultado = document.getElementById('resultadoArranjo').value = arranjo;
-    const mensagemArranjo = document.getElementById('mensagemArranjo').textContent = `A conta realizada foi ${n}! / (${n} - ${n - p})!`;
-}
-
-function calcularCombinacao() {
-    let n = document.getElementById('N!').value;
-    n = parseFloat(n);
-    let k = document.getElementById('k!').value;
-    k = parseFloat(k);
-
+    const fatorialNumerador = calcularFatorial(numerador);
+    const fatorialDenominador = calcularFatorial(denominador);
+    const divisao = fatorialNumerador / fatorialDenominador;
+    document.getElementById('resultadoDivisaoFatorial').value = divisao;
+    document.getElementById('mensagemDivisaoFatorial').textContent = `A conta realizada foi ${numerador}! / ${denominador}!`;
+  }
+  
+  function calcularArranjo() {
+    const n = parseFloat(document.getElementById('n!').value);
+    const p = parseFloat(document.getElementById('p!').value);
+    const subtracao = n - p;
+    verificaNumero(n, subtracao);
+    const fatorialN = calcularFatorial(n);
+    const fatorialP = calcularFatorial(subtracao);
+    const arranjo = fatorialN / fatorialP;
+    document.getElementById('resultadoArranjo').value = arranjo;
+    document.getElementById('mensagemArranjo').textContent = `A conta realizada foi ${n}! / (${n} - ${subtracao})!`;
+  }
+  
+  function calcularCombinacao() {
+    const n = parseFloat(document.getElementById('N!').value);
+    const k = parseFloat(document.getElementById('k!').value);
     verificaNumero(n, k);
-    transformaFatorial(n, k);
-
-    let kSubtracao = n - k;
-    let kSubtracaoFatorial = 1;
-    for (let i = 1; i <= kSubtracao; i++) {
-        kSubtracaoFatorial *= i;
-    }
-
-    let combinacao = fatorial_1 / (fatorial_2 * kSubtracaoFatorial);
-
-    const resultado = document.getElementById('resultadoCombinacao').value = combinacao;
-    const mensagemCombinacao = document.getElementById('mensagemCombinacao').textContent = `A conta realizada foi ${n}! / ${k}!(${n} - ${k})!`;
-}
+    const fatorialN = calcularFatorial(n);
+    const fatorialK = calcularFatorial(k);
+    const subtracao = n - k;
+    const fatorialSubtracao = calcularFatorial(subtracao);
+    const combinacao = fatorialN / (fatorialK * fatorialSubtracao);
+    document.getElementById('resultadoCombinacao').value = combinacao;
+    document.getElementById('mensagemCombinacao').textContent = `A conta realizada foi ${n}! / ${k}!`
+  }
+  
