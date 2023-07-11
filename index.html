@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análise Combinatória</title>
-    <script src="script.js"></script>
+    <script src="./js/script.js" type="module" defer ></script>
     <link rel="stylesheet" href="demo-files/demo.css">
     <link rel="stylesheet" href="style.css">
 
@@ -39,7 +39,7 @@
             <input type="text" name="resultado" id="resultado" disabled> <br>
             <p id="mensagemFatorial"></p>
 
-            <button class="button" onclick="calcularFatorialElemento()">Calcular</button>
+            <button class="button" id="calcularElementoFatorialBtn">Calcular</button>
         </div>
 
         <div class="itens">
@@ -62,7 +62,7 @@
 
             <p id="mensagemDivisaoFatorial"></p>
 
-            <button class="button" onclick="calcularDivisaoFatorial()">Calcular</button>
+            <button class="button" id="calcularDivisaoFatorialBtn">Calcular</button>
         </div>
 
         <div class="itens">
@@ -83,7 +83,7 @@
             <input disabled type="text" name="resultadoArranjo" id="resultadoArranjo"> <br>
             <p id="mensagemArranjo"></p>
 
-            <button class="button" onclick="calcularArranjo()">Calcular</button>
+            <button class="button" id="calcularArranjoFatorialBtn">Calcular</button>
         </div>
 
         <div class="itens">
@@ -105,7 +105,7 @@
             <input type="text" name="resultadoCombinacao" id="resultadoCombinacao" disabled> <br>
             <p id="mensagemCombinacao"></p>
 
-            <button class="button" onclick="calcularCombinacao()">Calcular</button>
+            <button class="button" id="calcularCombinacaoFatorialBtn">Calcular</button>
         </div>
 
     </div>
